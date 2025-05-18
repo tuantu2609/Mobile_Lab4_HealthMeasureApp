@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.HealthMeasureApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">#000000</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="colorPrimary">#FF9800</item>
+        <item name="colorAccent">#FF9800</item>
+    </style>
+</resources>
