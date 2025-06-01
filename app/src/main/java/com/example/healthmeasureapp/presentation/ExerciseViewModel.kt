@@ -21,7 +21,6 @@ class ExerciseViewModel : ViewModel() {
                 delay(1000)
                 elapsedSeconds++
                 _time.value = String.format("%02d:%02d", elapsedSeconds / 60, elapsedSeconds % 60)
-                calories.value = (elapsedSeconds / 5).toString()
             }
         }
     }
@@ -30,9 +29,13 @@ class ExerciseViewModel : ViewModel() {
         timerJob?.cancel()
     }
 
-
     fun updateSteps(stepsCount: Int) {
         steps.value = stepsCount.toString()
         distance.value = String.format("%.2f km", stepsCount * 0.0008)
     }
+
+    fun updateCalories(caloriesDouble: Double) {
+        calories.value = caloriesDouble.toInt().toString()
+    }
 }
+
