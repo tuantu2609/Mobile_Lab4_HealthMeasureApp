@@ -9,12 +9,11 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.healthmeasureapp"
+        applicationId = "com.example.fitnesstrackerapp"
         minSdk = 30
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
-
     }
 
     buildTypes {
@@ -39,7 +38,10 @@ android {
 }
 
 dependencies {
+    implementation("com.google.android.gms:play-services-wearable:18.0.0")
+
     implementation("androidx.wear:wear:1.2.0")
+
     implementation("androidx.wear.tiles:tiles-material:1.1.0")
     implementation("androidx.wear.watchface:watchface-complications-data-source:1.1.1")
 

@@ -8,10 +8,9 @@ class ExerciseViewModel : ViewModel() {
     private val _time = MutableLiveData("00:00")
     val time: LiveData<String> = _time
 
-    val heartRate = MutableLiveData("75")
-    val steps = MutableLiveData("20")
-    val distance = MutableLiveData("0.02 km")
-    val calories = MutableLiveData("1")
+    val steps = MutableLiveData("0")
+    val distance = MutableLiveData("0 km")
+    val calories = MutableLiveData("0")
 
     private var elapsedSeconds = 0
     private var timerJob: Job? = null
@@ -31,9 +30,6 @@ class ExerciseViewModel : ViewModel() {
         timerJob?.cancel()
     }
 
-    fun updateHeartRate(bpm: Float) {
-        heartRate.value = bpm.toInt().toString()
-    }
 
     fun updateSteps(stepsCount: Int) {
         steps.value = stepsCount.toString()
